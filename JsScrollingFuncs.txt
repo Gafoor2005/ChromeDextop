@@ -1,0 +1,4 @@
+element.offsetTop  -- it gives the elements distance from top (or) position of element
+element/scrollableDiv.scrollTop -- returns the elements inner scrollbar position
+window.scrollY  -- it gives position of scroll bar in y
+window.innerHeight -- it gives the inner height off the window

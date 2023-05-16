@@ -8,8 +8,10 @@
     font-family: 'Poppins', sans-serif;
 }
 .top{
+    scroll-snap-align: start;
     background: #000000b5;
     padding: 42px;
+    height: 250vh;
 }
 .time{
     display: flex;
@@ -29,15 +31,25 @@
     position: relative;
     bottom: 6px;
 }
-.apps{
+.container2{
+    width: fit-content;
     margin-top: 15em;
     background: aqua;
     padding: 4em;
     border-radius: 1em;
+}
+.apps{
+    position: sticky;
+    top: 0;
+    max-height: 9em;
     display: flex;
-    max-width: 38em;
+    max-width: 30em;
     gap: 1em;
     flex-wrap: wrap;
+    overflow-y: hidden;
+}
+.start-app{
+    scroll-snap-align: start;
 }
 .app{
     display: flex;
@@ -46,6 +58,7 @@
     align-items: center;
 }
 .app p{
+    line-height: 1em;
     text-overflow: ellipsis;
     max-width: 85%;
     overflow: hidden;
@@ -55,4 +68,22 @@
 .app img{
     width: 3em;
     height: 3em;
+}
+.middle{
+    height: 200vh;
+    opacity: 0;
+    transition: all .5s ease-in-out;
+}
+.active{
+    opacity: 1;
+    transform: translateX(-25px);
+}
+main{
+    height: 100vh;
+    height: 100svh;
+    overflow: hidden;
+    overflow-y: scroll;
+    /* transition: all 3s ease-in-out; */
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
 }
