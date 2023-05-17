@@ -32,6 +32,8 @@
     bottom: 6px;
 }
 .container2{
+    position: sticky;
+    top: 0;
     width: fit-content;
     margin-top: 15em;
     background: aqua;
@@ -39,6 +41,7 @@
     border-radius: 1em;
 }
 .apps{
+    scroll-snap-align: start;
     position: sticky;
     top: 0;
     max-height: 9em;
@@ -46,7 +49,9 @@
     max-width: 30em;
     gap: 1em;
     flex-wrap: wrap;
-    overflow-y: hidden;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    /* scroll-behavior: smooth; */
 }
 .start-app{
     scroll-snap-align: start;
@@ -86,4 +91,12 @@ main{
     /* transition: all 3s ease-in-out; */
     scroll-behavior: smooth;
     scroll-snap-type: y mandatory;
+}
+.apps::-webkit-scrollbar{
+    width: 0.1em;
+    border-radius: 21px;
+}
+.apps::-webkit-scrollbar-thumb{
+    background: dodgerblue;
+    border-radius: 21px;
 }
